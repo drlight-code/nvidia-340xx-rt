@@ -3,17 +3,18 @@
 # Contributor:  Morgan Cox <morgancoxuk@gmail.com>
 # Contributor: Joakim Hernberg <jbh@alchemy.lu>
 # Contributor: Thomas Baechler <thomas@archlinux.org>
+# Contributor: Patric Schmitz <flavi0@openmailbox.org>
 # Contributor: 325.15 - patch : Ninez 
 
 pkgname=nvidia-340xx-rt
 pkgver=340.96
-_extramodules=extramodules-4.4-rt
-pkgrel=2
+_extramodules=extramodules-4.6-rt
+pkgrel=3
 pkgdesc="NVIDIA drivers for linux-rt, 340xx legacy branch"
 arch=('i686' 'x86_64')
 url="http://www.nvidia.com/"
-depends=('linux-rt>=4.4' 'linux-rt<4.5' 'libgl' "nvidia-340xx-utils=${pkgver}")
-makedepends=("nvidia-340xx-libgl=${pkgver}" "nvidia-340xx-utils=${pkgver}" 'linux-rt' 'linux-rt-headers>=4.4' 'linux-rt-headers<4.5')
+depends=('linux-rt>=4.4' 'linux-rt<4.7' 'libgl' "nvidia-340xx-utils=${pkgver}")
+makedepends=("nvidia-340xx-libgl=${pkgver}" "nvidia-340xx-utils=${pkgver}" 'linux-rt' 'linux-rt-headers>=4.4' 'linux-rt-headers<4.7')
 conflicts=('nvidia-rt' 'nvidia-last-rt' 'nvidia-rt-lts')
 license=('custom')
 install=${pkgname}.install
